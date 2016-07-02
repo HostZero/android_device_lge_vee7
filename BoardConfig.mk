@@ -24,11 +24,11 @@ TARGET_CORTEX_CACHE_LINE_32 := true
 ARCH_ARM_HAVE_32_BYTE_CACHE_LINES := true
 
 # Kernel
-TARGET_KERNEL_SOURCE := kernel/lge/vee7
+# cyanogenmod_vee7_defconfig
+TARGET_PREBUILT_KERNEL := device/lge/vee7/prebuilt/kernel.gz
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x01300000
 BOARD_KERNEL_BASE := 0x00200000
 BOARD_KERNEL_PAGESIZE := 4096
-TARGET_KERNEL_CONFIG := cyanogenmod_vee7_defconfig
 BOARD_KERNEL_CMDLINE := androidboot.hardware=vee7 androidboot.selinux=permissive
 
 # Partitions

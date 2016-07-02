@@ -1,6 +1,3 @@
-# inherit from the proprietary version
--include vendor/lge/vee7/BoardConfigVendor.mk
-
 # Compiler flags
 TARGET_GLOBAL_CFLAGS += -mfloat-abi=softfp -mfpu=neon-vfpv4 -mtune=cortex-a5
 TARGET_GLOBAL_CPPFLAGS += -mfloat-abi=softfp -mfpu=neon-vfpv4 -mtune=cortex-a5
@@ -21,7 +18,7 @@ TARGET_ARCH := arm
 TARGET_ARCH_VARIANT := armv7-a-neon
 TARGET_CPU_ABI := armeabi-v7a
 TARGET_CPU_ABI2 := armeabi
-TARGET_CPU_VARIANT := cortex-a5
+TARGET_CPU_VARIANT := generic
 ARCH_ARM_HAVE_TLS_REGISTER := true
 TARGET_CORTEX_CACHE_LINE_32 := true
 ARCH_ARM_HAVE_32_BYTE_CACHE_LINES := true
@@ -121,7 +118,7 @@ WIFI_DRIVER_FW_PATH_P2P := "p2p"
 WIFI_DRIVER_FW_PATH_PARAM := "/data/misc/wifi/fwpath"
 
 # FSTAB
-TARGET_RECOVERY_FSTAB := device/lge/vee7/rootdir/fstab.vee7
+TARGET_RECOVERY_FSTAB := device/lge/vee7/recovery/root/twrp.fstab
 
 # Charger
 COMMON_GLOBAL_CFLAGS += -DBOARD_CHARGING_CMDLINE_NAME='"androidboot.mode"' -DBOARD_CHARGING_CMDLINE_VALUE='"charger"'
@@ -142,3 +139,14 @@ COMMON_GLOBAL_CFLAGS += -DRIL_VARIANT_LEGACY
 TARGET_UNIFIED_DEVICE := true
 TARGET_INIT_VENDOR_LIB := libinit_vee7
 TARGET_LIBINIT_DEFINES_FILE := device/lge/vee7/init/init_vee7.cpp
+
+# TWRP stuff
+TW_THEME := portrait_mdpi
+RECOVERY_GRAPHICS_USE_LINELENGTH := true
+TARGET_RECOVERY_QCOM_RTC_FIX := true
+BOARD_SUPPRESS_SECURE_ERASE := true
+RECOVERY_SDCARD_ON_DATA := true
+TW_DEFAULT_EXTERNAL_STORAGE := true
+TW_BRIGHTNESS_PATH := /sys/class/leds/lcd-backlight/brightness
+TW_INCLUDE_CRYPTO := true
+TARGET_USERIMAGES_USE_EXT4 := true

@@ -118,7 +118,7 @@ WIFI_DRIVER_FW_PATH_P2P := "p2p"
 WIFI_DRIVER_FW_PATH_PARAM := "/data/misc/wifi/fwpath"
 
 # FSTAB
-TARGET_RECOVERY_FSTAB := device/lge/vee7/recovery/root/twrp.fstab
+TARGET_RECOVERY_FSTAB := device/lge/vee7/recovery/root/etc/twrp.fstab
 
 # Charger
 COMMON_GLOBAL_CFLAGS += -DBOARD_CHARGING_CMDLINE_NAME='"androidboot.mode"' -DBOARD_CHARGING_CMDLINE_VALUE='"charger"'
